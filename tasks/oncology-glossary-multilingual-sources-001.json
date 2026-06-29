@@ -1,0 +1,36 @@
+{
+  "id": "oncology-glossary-multilingual-sources-001",
+  "title": "Build term-source allow-list with per-source license terms and exclusions",
+  "project": "oncology-glossary-multilingual",
+  "type": "data",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "translation", "patient-education", "licensing"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual builds an open, multilingual, plain-language glossary of oncology and clinical-trial terms for patients and caregivers (education only, not medical advice). Binding cancer guardrails: only open-access/aggregate/de-identified reference sources may be used; controlled-access data (dbGaP, EGA, biobanks) and any identifiable patient data are categorically out of scope; each source's license must be verified before use. Preferred sources are US-Government public-domain references (NCI Dictionary of Cancer Terms, ClinicalTrials.gov, NCI Thesaurus, MeSH); COSMIC/OncoKB (non-commercial), SNOMED CT (licensed), and copyrighted advocacy content are excluded absent permission. Nothing may be defined from a source until it is allow-listed with verified terms.",
+  "objective": "Create a structured, per-source allow-list recording each candidate source's license terms, derivative permission, required attribution, restricted/excluded status, and a hashed license snapshot, so the per-deliverable license/provenance gate can be checked consistently and restricted sources are never used.",
+  "acceptanceCriteria": [
+    "sources/term-source-allow-list.yaml lists >= 3 candidate sources including >= 1 US-Government public-domain source and >= 1 source explicitly excluded with an exclusionReason (e.g., COSMIC/OncoKB non-commercial or SNOMED CT licensed)",
+    "Each entry records: name, canonical URL, version/date, retrieval date, license name + URL, snapshot of license text, derivativesAllowed flag, required attribution string, restricted flag with exclusionReason where applicable",
+    "Each entry stores snapshotHash (SHA-256 of the captured license/source text) and snapshotArchiveUrl (web-archive copy) where available",
+    "No controlled-access or patient-level source appears (dbGaP, EGA, individual-level biobanks are categorically excluded)",
+    "Each entry has verifiedBy and verifiedDate; sources with unclear or incompatible terms are marked excluded with a reason",
+    "File validates against the project content schema and passes CI structural checks"
+  ],
+  "resources": [
+    "C:/code/elyos/planning/projects/oncology-glossary-multilingual/PLAN.md",
+    "C:/code/elyos/planning/ROADMAP.md",
+    "C:/code/elyos/docs/good-deed-definition.md",
+    "NCI Dictionary of Cancer Terms (verify current license/attribution)",
+    "ClinicalTrials.gov Learn About Studies / glossary (US Gov, verify embedded third-party)",
+    "MeSH and MedlinePlus content-use notices (verify per item for embedded copyrighted content)"
+  ],
+  "output": "sources/term-source-allow-list.yaml plus a short README documenting the allow-list schema, the open-access-only guardrail, and the verification process",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
