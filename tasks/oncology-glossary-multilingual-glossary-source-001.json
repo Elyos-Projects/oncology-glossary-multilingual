@@ -1,0 +1,36 @@
+{
+  "id": "oncology-glossary-multilingual-glossary-source-001",
+  "title": "Author and clinical/advocate-review ≥25 source terms (seed glossary)",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "patient-education", "plain-language"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "oncology-glossary-multilingual produces patient-facing oncology/clinical-trial definitions at riskTier HIGH. This task produces the core reviewed source-language seed glossary of at least 25 terms, each with clinical and patient-advocate sign-off, provenance, and a not-medical-advice notice. Requires draft-001 (drafts in review) and reviewers-002 (secured reviewers) as prerequisites.",
+  "objective": "Author at least 25 oncology/clinical-trial source definitions at or below grade-8 reading level, grounded in allow-listed sources, and obtain both clinical and patient-advocate sign-off on each entry per the review checklists and handoff template. Resolve all agent uncertainty flags before sign-off.",
+  "acceptanceCriteria": [
+    "At least 25 source terms are authored in glossary/source/<term-id>.yaml, each with: termId, term, definition (at or below grade 8), notMedicalAdvice:true, sourceRefs (allow-listed source), safetyLoad classification, readingLevelScore, and aliases where applicable",
+    "Each term has both clinicalSignoff (credentialed oncology reviewer per review-001) and advocateSignoff (patient advocate per review-002) recorded in the review artifact; an entry missing either remains blocked and is not counted toward the 25",
+    "All agent uncertainty flags are resolved or accepted-as-is with reasoning before sign-off; no unresolved flags remain on signed-off entries",
+    "No advice, dosing, diagnostic, or prognostic content appears in any entry (confirmed by both clinical and advocate review)",
+    "License/provenance check (license-001) is green for every entry: source allow-listed and permitted, attribution present, provenance complete, notMedicalAdvice:true, output license correct",
+    "Source sign-off pass rate is reportable once denominator reaches at least 10 entries"
+  ],
+  "resources": [
+    "glossary/source/ (draft entries from draft-001)",
+    "docs/reviewer-qualification-rules.md (reviewers-001)",
+    "templates/clinical-review-checklist.md (review-001)",
+    "templates/advocate-review-checklist.md (review-002)",
+    "templates/reviewer-handoff.md (template-001)",
+    "sources/term-source-allow-list.yaml (sources-001 and license-000)"
+  ],
+  "output": "At least 25 reviewed and signed-off source glossary entries in glossary/source/<term-id>.yaml with completed review artifacts",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC BY 4.0"
+}

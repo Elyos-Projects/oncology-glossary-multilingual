@@ -1,0 +1,32 @@
+{
+  "id": "oncology-glossary-multilingual-license-002",
+  "title": "Automate license, provenance, and not-medical-advice enforcement in CI",
+  "project": "oncology-glossary-multilingual",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "tooling", "licensing"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "oncology-glossary-multilingual requires per-deliverable license and provenance verification as a hard gate. license-001 (M1) defines the checkable procedure. This task automates that procedure in CI so that every content deliverable is validated programmatically against the allow-list: missing attribution, provenance, or notMedicalAdvice, or a source-incompatible output license, all fail CI.",
+  "objective": "Implement CI automation that validates each glossary entry and translation against the term-source allow-list, failing the build if: attribution is missing or incorrect, provenance is incomplete, notMedicalAdvice is not true, or the output license is source-incompatible.",
+  "acceptanceCriteria": [
+    "A CI check script is added (tooling/check-license-provenance.js or wired into validate.ts) that, for each glossary entry and translation: verifies the source is in the allow-list with derivativesAllowed:true, confirms the required attribution string is present, checks provenance fields are complete, asserts notMedicalAdvice:true, and validates output license compatibility",
+    "CI fails hard (non-zero exit) if any of the above checks fails for any deliverable",
+    "The check is wired into pnpm test so it runs on every PR",
+    "pnpm build && pnpm test && pnpm lint pass on the PR",
+    "Implementation lives in the agent-neutral core (packages/schema or tooling/) per Elyos architecture rules, not in adapters/"
+  ],
+  "resources": [
+    "docs/license-provenance-check.md (license-001)",
+    "sources/term-source-allow-list.yaml (sources-001)",
+    "packages/schema/src/schemas.ts (schema-001)"
+  ],
+  "output": "PR adding automated license/provenance/notMedicalAdvice CI validation wired into pnpm test",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

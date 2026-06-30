@@ -1,0 +1,31 @@
+{
+  "id": "oncology-glossary-multilingual-watcher-000",
+  "title": "Minimal source-change re-fetch check (hash compare) — manual; automated in M2",
+  "project": "oncology-glossary-multilingual",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "tooling", "licensing"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual derives definitions from allow-listed sources whose license terms and content can change over time as oncology terminology and standards evolve. A minimal source-change watcher is required in M0 to detect when a source's hash differs from its stored snapshot, triggering re-verification before further definitions are drafted from that source. A fully automated watcher is planned for M2 (watcher-001).",
+  "objective": "Implement a minimal script that re-fetches each allow-listed source URL, computes a SHA-256 hash of the retrieved content, and compares it to the stored snapshotHash in the allow-list YAML, reporting any drift as a warning for manual re-verification.",
+  "acceptanceCriteria": [
+    "A script (tooling/check-source-hashes.js or similar) is added that: reads sources/term-source-allow-list.yaml, re-fetches each non-restricted source URL, computes SHA-256 of the retrieved content, and compares it to the stored snapshotHash",
+    "Any hash mismatch is reported as a WARNING with the source name, URL, stored hash, and new hash — not silently ignored",
+    "The script is documented in a brief README or inline comment explaining how to run it manually",
+    "pnpm build && pnpm test && pnpm lint pass on the PR",
+    "The script does not automatically update the allow-list; drift is flagged for human re-verification only"
+  ],
+  "resources": [
+    "sources/term-source-allow-list.yaml (from sources-001)",
+    "packages/schema/src/schemas.ts (from schema-001)"
+  ],
+  "output": "PR adding tooling/check-source-hashes.js (or equivalent) with documentation for manual use",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

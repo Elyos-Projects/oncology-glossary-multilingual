@@ -1,0 +1,31 @@
+{
+  "id": "oncology-glossary-multilingual-rotation-001",
+  "title": "Establish reviewer rotation across all three review gates",
+  "project": "oncology-glossary-multilingual",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "review-process", "patient-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual's quality pipeline depends on three reviewer gates (clinical, advocate, translation). Single-person dependence on any gate is a sustainability risk as the glossary scales to more languages and terms in M4. Reviewer rotation across all three gates ensures continuity and removes bottlenecks.",
+  "objective": "Establish a documented reviewer rotation policy and schedule across all three review gates (clinical, advocate, translation), ensuring no single reviewer is a single point of failure and covering upcoming review work as the glossary scales.",
+  "acceptanceCriteria": [
+    "docs/reviewer-rotation.md is created defining: minimum reviewer bench per gate (at least 2 per gate recommended), rotation schedule, onboarding process for new reviewers (including qualification check per reviewers-001, COI, checklist familiarization), and escalation path if a reviewer is unavailable",
+    "Rotation plan covers all three gates: clinical, patient-advocate, and translation (per language pair)",
+    "Policy references the reviewer-qualification rules (reviewers-001) and COI requirements",
+    "At least the existing reviewers from reviewers-002 and translators-001 are listed as initial rotation members"
+  ],
+  "resources": [
+    "docs/reviewer-qualification-rules.md (reviewers-001)",
+    "docs/reviewer-roster.md (reviewers-002, translators-001)",
+    "PLAN.md — Governance section (reviewer rotation)"
+  ],
+  "output": "docs/reviewer-rotation.md with the rotation policy, schedule, and onboarding process",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

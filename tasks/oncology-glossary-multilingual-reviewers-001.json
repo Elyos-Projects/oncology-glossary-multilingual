@@ -1,0 +1,34 @@
+{
+  "id": "oncology-glossary-multilingual-reviewers-001",
+  "title": "Reviewer qualification, independence, and disagreement rules (clinical and advocate)",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "patient-education", "review-process"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual requires credentialed oncology reviewers and patient advocates to sign off every source definition before publication. Objective qualification criteria, independence rules, COI requirements, and a disagreement-resolution ladder are needed before reviewer recruitment begins (reviewers-002) to ensure consistent, trustworthy sign-offs across all entries.",
+  "objective": "Document objective qualification criteria for credentialed oncology reviewers and patient advocates, reviewer independence rules (drafter may not sign off), COI declaration requirements, the requirement that clinical and advocate reviewers be different people, and the disagreement-resolution ladder (reconcile, escalate, conservative reading wins).",
+  "acceptanceCriteria": [
+    "docs/reviewer-qualification-rules.md defines objective criteria for a credentialed oncology reviewer (oncologist, oncology pharmacist, or oncology nurse with relevant scope) and a patient advocate (health-literacy or patient-navigation competence)",
+    "Rules specify that the person who ran the drafting agent may not be a sign-off reviewer for that entry (reviewer independence)",
+    "Rules specify that the clinical and advocate reviewers must be different people",
+    "Rules require a COI declaration from each reviewer before their first sign-off, recorded in the review artifact",
+    "Disagreement-resolution ladder is documented: (1) reconcile against source/termbase with rationale, (2) escalate unresolved safety-relevant disagreements to a second clinician or the maintainer with decision recorded, (3) when in doubt the conservative reading wins and the disputed entry is held back",
+    "Rules specify that unresolved agent uncertainty flags block sign-off"
+  ],
+  "resources": [
+    "PLAN.md — Quality, review and risk gates section",
+    "PLAN.md — Governance, roles and stakeholders section",
+    "templates/clinical-review-checklist.md (review-001)",
+    "templates/advocate-review-checklist.md (review-002)"
+  ],
+  "output": "docs/reviewer-qualification-rules.md covering qualification criteria, independence, COI, disagreement resolution, and flag-resolution requirements",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

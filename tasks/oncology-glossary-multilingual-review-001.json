@@ -1,0 +1,29 @@
+{
+  "id": "oncology-glossary-multilingual-review-001",
+  "title": "Clinical review checklist (oncology accuracy)",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "patient-education", "review-process"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual produces patient-facing health content at riskTier HIGH. A clinical review checklist is required so credentialed oncology reviewers can systematically verify accuracy, absence of advice creep, correct reading level, and resolution of agent uncertainty flags before any source definition is signed off. This checklist is a prerequisite for review-003 and template-001.",
+  "objective": "Author a clinical review checklist for credentialed oncology reviewers covering: clinical accuracy, absence of dosing/diagnostic/prognostic advice, correct use of terminology, notMedicalAdvice notice present, sourceRefs present, agent uncertainty flags reviewed, and sign-off recording procedure.",
+  "acceptanceCriteria": [
+    "templates/clinical-review-checklist.md is created with checkable items covering: clinical accuracy of the definition, absence of advice/dosing/diagnostic/prognostic content, correct oncology terminology, notMedicalAdvice notice present, sourceRefs to an allow-listed source, and resolution status of all agentFlags",
+    "Checklist includes a sign-off block capturing: reviewer name, credentials, date, COI declaration, and disposition of each agentFlag (resolved/accepted-as-is with reasoning)",
+    "Checklist is consistent with the review artifact data model in PLAN.md"
+  ],
+  "resources": [
+    "PLAN.md — Quality, review and risk gates section",
+    "PLAN.md — Artifacts / data model section"
+  ],
+  "output": "templates/clinical-review-checklist.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

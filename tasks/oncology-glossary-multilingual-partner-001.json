@@ -1,0 +1,32 @@
+{
+  "id": "oncology-glossary-multilingual-partner-001",
+  "title": "Secure first partner; agree language and priority terms",
+  "project": "oncology-glossary-multilingual",
+  "type": "research",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "translation", "patient-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "oncology-glossary-multilingual cannot reach its Definition of Shipped without a partner organization that adopts and distributes the glossary to beneficiaries. Securing a partner is the M3 entry gate. All M3 tasks are gated on a confirmed partner; verifiedNeed flips to true only when confirmed. A steward must also be named before entering M3. If no partner is secured by approximately 2027-03-31, the project pivots or mothballs per the decision rule in PLAN.md.",
+  "objective": "Identify and confirm a named cancer-care or advocacy organization as the first partner/requestor, agree on the target language and prioritized term list, and confirm reviewer coverage for that language. On completion, update related tasks with requestor name and verifiedNeed:true.",
+  "acceptanceCriteria": [
+    "A named cancer-care or advocacy organization is confirmed in writing as the requestor/partner, with the confirmation recorded in the PR or receipt",
+    "The partner has agreed on: (a) the target language (qualifying per the PLAN target-language selection rule), (b) a prioritized term list, and (c) confirmation that translation-reviewer coverage for the language is available",
+    "A steward (last-mile owner) is named before or at completion of this task as a prerequisite to enter M3",
+    "On completion, related delivery tasks (translate-002, delivery-001) are updated with the requestor name and verifiedNeed:true",
+    "If no partner is secured by approximately 2027-03-31, the pivot/mothball decision is invoked and documented per the rule in PLAN.md"
+  ],
+  "resources": [
+    "PLAN.md — Governance section (Partner / requestor role)",
+    "PLAN.md — Reviewer- and partner-acquisition plan",
+    "docs/reviewer-roster.md (translators-001)"
+  ],
+  "output": "docs/partner-agreement.md (or equivalent) recording the confirmed partner, agreed target language, priority terms, steward name, and reviewer coverage confirmation",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

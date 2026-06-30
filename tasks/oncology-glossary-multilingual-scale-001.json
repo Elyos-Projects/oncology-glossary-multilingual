@@ -1,0 +1,33 @@
+{
+  "id": "oncology-glossary-multilingual-scale-001",
+  "title": "Add ≥1 more language to ≥100 reviewed terms",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "translation", "patient-education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "oncology-glossary-multilingual's M4 goal is to scale languages and terms while maintaining quality and tracking outcomes. Following first delivery (delivery-001), this task expands coverage to at least 1 additional under-served language with at least 100 reviewed terms, each following the full two-stage review pipeline (clinical + advocate sign-off on source, then qualified translation review + back-translation QA for safety-load terms).",
+  "objective": "Expand the glossary to cover at least 1 additional under-served language with at least 100 reviewed and translation-reviewed terms, following the established two-stage review pipeline and license gates.",
+  "acceptanceCriteria": [
+    "At least 1 additional language (qualifying per the PLAN target-language selection rule) has at least 100 translation-reviewed and signed-off terms",
+    "Each term follows the full pipeline: source definition with clinical + advocate sign-off, then translation with qualified translation-reviewer sign-off and back-translation QA for terms with safetyLoad other than none",
+    "A qualified medical-translation reviewer for the new language pair is confirmed (COI on file) before translation begins",
+    "license-002 passes for every new entry (attribution, provenance, notMedicalAdvice:true, license-compatible)",
+    "Outcomes are tracked per the outcomes-001 log (adoption status, defects, readability, usefulness)"
+  ],
+  "resources": [
+    "glossary/source/ (reviewed source terms from glossary-source-001)",
+    "output/ (delivery-001)",
+    "docs/reviewer-roster.md",
+    "templates/translation-review-checklist.md (review-003)"
+  ],
+  "output": "glossary/<new-lang>/<term-id>.yaml for at least 100 reviewed terms in the new language, with translation review sign-offs and QA results; delivered package for the partner",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC BY 4.0"
+}

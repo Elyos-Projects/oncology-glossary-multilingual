@@ -1,0 +1,31 @@
+{
+  "id": "oncology-glossary-multilingual-outcomes-001",
+  "title": "Outcome tracking: post-delivery defect and feedback log",
+  "project": "oncology-glossary-multilingual",
+  "type": "data",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "patient-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual measures success by outcomes delivered to beneficiaries, not tasks merged. After the first delivery (delivery-001), a post-delivery defect and feedback log is required to track adoption status, critical defects (target 0), readability outcomes, and partner/beneficiary usefulness feedback. This feeds the success metrics in PLAN.md and supports the withdraw-first correction policy.",
+  "objective": "Set up and maintain a per-language outcome tracking log recording: adoption status, post-delivery critical defects (meaning-changing errors, negation/urgency errors, advice creep — target 0), readability outcomes, and partner/beneficiary usefulness feedback.",
+  "acceptanceCriteria": [
+    "docs/outcome-log.md (or outcome-log.yaml) is created with a per-language section recording: adoption status (adopted or not yet adopted), post-delivery critical defects log (date, term, defect description, severity, resolution), readability outcomes, and partner/beneficiary usefulness feedback",
+    "Log distinguishes critical defects (meaning-changing, negation/urgency error, advice creep) from non-critical issues; critical defect target is 0",
+    "Log is structured to feed the success metrics table in PLAN.md",
+    "A procedure is noted for handling post-delivery inaccuracies: withdraw first, correct, re-review, then re-publish"
+  ],
+  "resources": [
+    "PLAN.md — Success metrics section",
+    "docs/partner-agreement.md (partner-001)",
+    "output/ (delivery-001)"
+  ],
+  "output": "docs/outcome-log.md (or outcome-log.yaml) with per-language outcome tracking structure and initial entry after delivery-001",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

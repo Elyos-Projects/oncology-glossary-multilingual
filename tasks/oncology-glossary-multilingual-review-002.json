@@ -1,0 +1,30 @@
+{
+  "id": "oncology-glossary-multilingual-review-002",
+  "title": "Patient-advocate review checklist (plain language, reading level, no advice creep)",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "patient-education", "plain-language", "review-process"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual produces patient-facing health content at riskTier HIGH. A patient-advocate review checklist is required so patient advocates can systematically verify plain-language clarity, reading level (at or below grade 8), emotional appropriateness, and absence of advice creep before any source definition is signed off. The advocate reviewer must be a different person from the clinician.",
+  "objective": "Author a patient-advocate review checklist covering: plain-language clarity, reading level (at or below grade 8), emotional appropriateness, absence of advice creep, and notMedicalAdvice notice. Include a sign-off recording procedure.",
+  "acceptanceCriteria": [
+    "templates/advocate-review-checklist.md is created with checkable items covering: plain-language clarity (at or below grade 8 reading level), emotional appropriateness, absence of advice/instruction/dosing content, notMedicalAdvice notice present, and resolution status of all agentFlags",
+    "Checklist includes a sign-off block capturing: reviewer name, health-literacy or patient-navigation competence, date, COI declaration, and disposition of each agentFlag",
+    "Checklist notes that the advocate reviewer must be a different person from the clinical reviewer",
+    "Checklist is consistent with the review artifact data model in PLAN.md"
+  ],
+  "resources": [
+    "PLAN.md — Quality, review and risk gates section",
+    "PLAN.md — Artifacts / data model section"
+  ],
+  "output": "templates/advocate-review-checklist.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

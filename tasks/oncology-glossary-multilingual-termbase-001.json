@@ -1,0 +1,33 @@
+{
+  "id": "oncology-glossary-multilingual-termbase-001",
+  "title": "Language-pair termbase (preserved terms, units, transliteration) for first target language",
+  "project": "oncology-glossary-multilingual",
+  "type": "data",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "translation", "patient-education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "dataset",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual requires a language-pair termbase to guide translation and ensure clinical terms, units, negations, and urgency markers are handled consistently and correctly. Mistranslating negations or urgency is a safety-critical error. The termbase is a prerequisite for translate-001 and must be reviewed by the qualified translation reviewer (translators-001) before translation work begins.",
+  "objective": "Create a language-pair termbase for the first target language covering: preserved terms (terms that should remain in source language or be transliterated), clinical units, negation patterns, urgency/consent markers, and required transliteration conventions. Obtain translation reviewer sign-off.",
+  "acceptanceCriteria": [
+    "glossary/termbase/<lang>-termbase.yaml (or equivalent) is created for the first target language, covering: preserved terms (terms to retain in source language or transliterate), clinical units, negation and urgency patterns, consent-term conventions, and transliteration rules if applicable",
+    "Termbase is reviewed and signed off by the qualified translation reviewer (translators-001)",
+    "Termbase entries are structured so translate-001 can reference them during translation (machine-readable and human-readable)",
+    "Termbase carries source attribution and a not-medical-advice note; license is source-compatible",
+    "No patient data or identifiable information is included"
+  ],
+  "resources": [
+    "glossary/source/ (reviewed source terms from glossary-source-001)",
+    "docs/reviewer-roster.md (translators-001)",
+    "templates/translation-review-checklist.md (review-003)",
+    "PLAN.md — Solution approach Stage B section"
+  ],
+  "output": "glossary/termbase/<lang>-termbase.yaml for the first target language, reviewed and signed off by the translation reviewer",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC BY 4.0"
+}

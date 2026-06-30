@@ -1,0 +1,32 @@
+{
+  "id": "oncology-glossary-multilingual-schema-001",
+  "title": "Content JSON schemas (allow-list/entry/translation/review) plus CI structural check",
+  "project": "oncology-glossary-multilingual",
+  "type": "code",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "tooling", "patient-education", "licensing"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "oncology-glossary-multilingual builds an open, multilingual, plain-language glossary of oncology and clinical-trial terms. Structured content schemas and CI validation are essential to enforce safety-critical fields (notMedicalAdvice, sourceRefs, reviewer sign-offs) consistently. The schema lives in the agent-neutral core (packages/schema) per Elyos architecture rules; no vendor/agent-specific logic belongs in adapters.",
+  "objective": "Add termSourceAllowListSchema, glossaryEntrySchema, glossaryTranslationSchema, and reviewSchema to packages/schema/src/schemas.ts, compiled via validate.ts (AJV + ajv-formats), and wire a structural-check script into pnpm test so CI fails on any non-conformant content file.",
+  "acceptanceCriteria": [
+    "packages/schema/src/schemas.ts includes termSourceAllowListSchema, glossaryEntrySchema, glossaryTranslationSchema, and reviewSchema compiled with AJV and ajv-formats",
+    "A structural-check script is wired into pnpm test and fails CI if: notMedicalAdvice is not true, sourceRefs is empty, a delivered or done entry lacks required sign-offs, or a YAML content file is malformed or non-conformant",
+    "pnpm build && pnpm test && pnpm lint pass on the PR",
+    "All schemas live in packages/schema/src/schemas.ts (agent-neutral core; no vendor/agent-specific logic in adapters/)",
+    "YAML artifacts in sources/ and glossary/ are parsed to JSON and validated by the structural-check script"
+  ],
+  "resources": [
+    "C:/code/elyos/packages/schema/src/schemas.ts",
+    "sources/term-source-allow-list.yaml (from sources-001)",
+    "PLAN.md — data model section for artifact structures"
+  ],
+  "output": "PR adding content schemas to packages/schema/src/schemas.ts and a structural-check CI script wired into pnpm test",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}
