@@ -1,0 +1,32 @@
+{
+  "id": "oncology-glossary-multilingual-delivery-001",
+  "title": "Package and deliver glossary set; confirm partner adoption",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "translation", "patient-education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual's Definition of Shipped requires delivery to and confirmed adoption by the partner (partner-001). This task packages the reviewed, translated glossary set and delivers it to the partner, recording written confirmation of adoption. This is the first true Definition of Shipped event for the project and gates outcomes tracking (outcomes-001) and scale work (scale-001).",
+  "objective": "Package the reviewed and translation-reviewed glossary set (terms, definitions/translations, provenance, attribution, not-medical-advice notice, and all sign-offs) and deliver it to the partner, obtaining written adoption confirmation recorded in the PR.",
+  "acceptanceCriteria": [
+    "The delivered package includes for each term: the translation, provenance (source, version/date, retrieval date, snapshotHash), required attribution string, not-medical-advice notice in the target language, clinical sign-off, advocate sign-off, and translation reviewer sign-off",
+    "license-002 CI check passes for every entry in the package (attribution, provenance, notMedicalAdvice:true, license-compatible)",
+    "The partner confirms adoption for distribution in writing; this confirmation is recorded in the PR or a linked receipt artifact",
+    "The steward (named in partner-001) approves the delivery PR",
+    "Output is in a format the partner can embed or distribute (Markdown, YAML, or agreed format)"
+  ],
+  "resources": [
+    "glossary/<lang>/<term-id>.yaml (translate-002)",
+    "docs/partner-agreement.md (partner-001)",
+    "PLAN.md — Quality, review and risk gates — Definition of Shipped section"
+  ],
+  "output": "Delivery package (output/<lang>-glossary-v1.md or equivalent) plus written partner adoption confirmation recorded in the PR",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC BY 4.0"
+}

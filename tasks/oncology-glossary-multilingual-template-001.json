@@ -1,0 +1,31 @@
+{
+  "id": "oncology-glossary-multilingual-template-001",
+  "title": "Reviewer handoff template plus not-medical-advice notice",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "patient-education", "review-process"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual requires a structured handoff template to transfer draft entries to clinical and advocate reviewers, and a canonical not-medical-advice notice that must appear on every published entry in every language. Both are blocking prerequisites for the draft-001 authoring task. Depends on review-001 and review-002 for the checklist references.",
+  "objective": "Author a reviewer handoff template for transferring draft glossary entries to clinical and patient-advocate reviewers, and a canonical not-medical-advice notice to be attached to every entry.",
+  "acceptanceCriteria": [
+    "templates/reviewer-handoff.md is created with sections for: entry metadata (termId, definition, sourceRefs, safetyLoad, readingLevelScore), the agentFlags list to be resolved, links to both checklists (clinical and advocate), sign-off blocks for both reviewers, and a disagreement-escalation note",
+    "templates/not-medical-advice-notice.md is created with the canonical notice text indicating the entry is for educational reference only and not medical advice, and directing readers to talk to their care team",
+    "Both templates are consistent with the data model in PLAN.md and reference the review checklists from review-001 and review-002"
+  ],
+  "resources": [
+    "PLAN.md — Quality, review and risk gates section",
+    "PLAN.md — Artifacts / data model section",
+    "templates/clinical-review-checklist.md (review-001)",
+    "templates/advocate-review-checklist.md (review-002)"
+  ],
+  "output": "templates/reviewer-handoff.md and templates/not-medical-advice-notice.md",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

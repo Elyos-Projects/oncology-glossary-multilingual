@@ -1,0 +1,32 @@
+{
+  "id": "oncology-glossary-multilingual-watcher-001",
+  "title": "Automate source-change watcher (hash-diff vs. snapshots)",
+  "project": "oncology-glossary-multilingual",
+  "type": "code",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "tooling", "licensing"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "pr",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual's allow-listed sources can change over time as oncology terminology and license terms evolve. The manual watcher (watcher-000) requires human initiation. This task automates the source-change watcher so it runs on a schedule or CI trigger, recomputes hashes, and files an issue or fails CI when drift is detected, ensuring the allow-list and definitions stay current.",
+  "objective": "Implement an automated source-change watcher that periodically re-fetches each allow-listed source, recomputes its SHA-256 hash, compares it to the stored snapshotHash, and files a GitHub issue or CI annotation when drift is detected — building on watcher-000 and the schema from schema-001.",
+  "acceptanceCriteria": [
+    "tooling/watch-sources.js (or equivalent) is updated or replaced to run automatically via GitHub Actions schedule or CI hook rather than only manually",
+    "On hash mismatch, the watcher files a GitHub issue or creates a CI annotation identifying the source name, URL, stored hash, and new hash, triggering manual re-verification before further definitions are drafted from that source",
+    "The watcher uses the snapshotHash values in sources/term-source-allow-list.yaml (from sources-001) as its reference",
+    "pnpm build && pnpm test && pnpm lint pass on the PR",
+    "No automatic allow-list updates are made; drift is flagged for human re-verification only"
+  ],
+  "resources": [
+    "tooling/check-source-hashes.js (watcher-000)",
+    "sources/term-source-allow-list.yaml (sources-001)",
+    "packages/schema/src/schemas.ts (schema-001)"
+  ],
+  "output": "PR replacing or extending watcher-000 with an automated scheduled source-change watcher",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

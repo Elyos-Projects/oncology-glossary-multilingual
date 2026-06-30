@@ -1,0 +1,36 @@
+{
+  "id": "oncology-glossary-multilingual-translate-001",
+  "title": "Translate reviewed seed glossary into first target language with back-translation QA",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "translation", "patient-education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "oncology-glossary-multilingual translates reviewed oncology glossary entries into under-served languages. This task produces the first translated language set from the reviewed seed glossary (glossary-source-001), using the termbase (termbase-001), with qualified medical-translation reviewer sign-off and mandatory back-translation QA for all safety-load terms before any translation ships.",
+  "objective": "Translate all reviewed source terms (from glossary-source-001) into the first target language using termbase-001, preserving meaning, negations, urgency, and preserved terms. Obtain qualified medical-translation reviewer sign-off on each entry. Perform mandatory back-translation QA for every term with safetyLoad other than none.",
+  "acceptanceCriteria": [
+    "Every reviewed and signed-off source term from glossary-source-001 is translated into the target language in glossary/<lang>/<term-id>.yaml, preserving meaning, negations, urgency, and preserved terms from termbase-001",
+    "Qualified medical-translation reviewer sign-off (translators-001) is recorded per entry; reviewer is independent of the drafting step and COI-declared",
+    "Back-translation QA is performed for every term with safetyLoad other than none: an independent back-translation is produced and compared to the reviewed source definition before sign-off; any discrepancy is resolved before the entry is marked done",
+    "All agent uncertainty flags are resolved or accepted-as-is with reasoning before sign-off",
+    "Each translation inherits source attribution and the not-medical-advice notice in the target language",
+    "license-002 passes for every translated entry (attribution, provenance, notMedicalAdvice:true, license-compatible)",
+    "UTF-8 encoding throughout"
+  ],
+  "resources": [
+    "glossary/source/ (reviewed source terms from glossary-source-001)",
+    "glossary/termbase/<lang>-termbase.yaml (termbase-001)",
+    "templates/translation-review-checklist.md (review-003)",
+    "docs/reviewer-roster.md (translators-001)",
+    "PLAN.md — Solution approach Stage B section"
+  ],
+  "output": "glossary/<lang>/<term-id>.yaml for every reviewed source term, with translation review sign-offs and back-translation QA results recorded",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC BY 4.0"
+}

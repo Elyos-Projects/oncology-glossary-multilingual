@@ -1,0 +1,33 @@
+{
+  "id": "oncology-glossary-multilingual-license-000",
+  "title": "BLOCKING: confirm derivative permission and exact attribution for each seed source",
+  "project": "oncology-glossary-multilingual",
+  "type": "research",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "licensing", "patient-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual builds an open, multilingual, plain-language glossary of oncology and clinical-trial terms for patients and caregivers. Before any source definitions can be drafted (draft-001), every seed source must have confirmed and recorded permission for derivative plain-language definitions and the exact required attribution. This is a hard blocking gate: draft-001 must not begin until license-000 passes.",
+  "objective": "For each seed source used by draft-001, confirm and record in writing on its allow-list entry: (a) the source's terms permit a derivative plain-language definition, and (b) the exact required attribution string. Exclude any source that cannot be confirmed.",
+  "acceptanceCriteria": [
+    "For each seed source used by draft-001, the term-source-allow-list.yaml entry records in writing: (a) confirmation that the license permits a derivative plain-language definition, and (b) the exact required attribution string",
+    "Any seed source that cannot be confirmed as permitting derivatives is marked excluded with an exclusionReason, and draft-001 uses only confirmed sources",
+    "draft-001 does not start until this task is complete and the allow-list entries are updated",
+    "Confirmation is recorded with verifiedBy and verifiedDate on each entry"
+  ],
+  "resources": [
+    "sources/term-source-allow-list.yaml (from sources-001)",
+    "NCI Dictionary of Cancer Terms — confirm current reuse/derivative terms",
+    "ClinicalTrials.gov Learn About Studies glossary — confirm current reuse/derivative terms",
+    "MeSH (NLM) — confirm current reuse/derivative terms",
+    "MedlinePlus content-use notices — per-item verification required"
+  ],
+  "output": "Updated sources/term-source-allow-list.yaml with confirmed derivative-permission and exact attribution recorded on each seed source entry, plus a brief written confirmation note attached to the PR",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

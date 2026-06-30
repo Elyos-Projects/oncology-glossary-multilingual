@@ -1,0 +1,31 @@
+{
+  "id": "oncology-glossary-multilingual-license-001",
+  "title": "Per-deliverable license, provenance, and not-medical-advice check procedure",
+  "project": "oncology-glossary-multilingual",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "licensing", "patient-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual requires a per-deliverable license and provenance check to ensure every entry is sourced from an allow-listed, permitted source with correct attribution and a not-medical-advice notice. This procedure formalizes the gate used informally in M0/M1 and provides the specification for automated enforcement in license-002 (M2). Depends on sources-001 (allow-list) and schema-001 (content schemas).",
+  "objective": "Document a checkable per-deliverable procedure that verifies, for each glossary entry and translation: (a) source is allow-listed and derivative permission confirmed, (b) required attribution is present, (c) provenance is complete, (d) not-medical-advice notice is present, and (e) output license is source-compatible. Structure it as a checklist that tooling can later enforce.",
+  "acceptanceCriteria": [
+    "docs/license-provenance-check.md defines a per-deliverable checklist verifying: source in allow-list with derivativesAllowed:true, required attribution string present verbatim, provenance fields complete (URL, version/date, retrieval date, snapshotHash), notMedicalAdvice:true, output license source-compatible",
+    "Procedure specifies what happens when a check fails: entry is held back (not delivered/done) and the source/attribution/provenance gap is recorded and resolved before resubmission",
+    "Checklist is structured so that a future automated tool (license-002) can implement it programmatically",
+    "Procedure covers both source-language entries and translations (translation inherits source attribution and notice)"
+  ],
+  "resources": [
+    "sources/term-source-allow-list.yaml (sources-001)",
+    "packages/schema/src/schemas.ts (schema-001)",
+    "PLAN.md — Data, licensing and compliance section"
+  ],
+  "output": "docs/license-provenance-check.md with the per-deliverable checklist procedure",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

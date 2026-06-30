@@ -1,0 +1,35 @@
+{
+  "id": "oncology-glossary-multilingual-draft-001",
+  "title": "Draft ≤10 source definitions (held in review, not published)",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "patient-education", "plain-language"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual builds patient-facing oncology glossary entries requiring riskTier HIGH review. Before clinical and advocate reviewers are engaged (M1), a small set of draft definitions can be authored as a proof-of-concept, held in review status only, never published. This demonstrates the drafting pipeline and surfaces agent uncertainty flags. The BLOCKING license-000 prerequisite must pass before drafting begins.",
+  "objective": "Draft at most 10 plain-language oncology/clinical-trial definitions sourced from allow-listed, license-confirmed sources, each at or below grade-8 reading level with notMedicalAdvice:true and sourceRefs. Emit UNCERTAIN: flags for anything ambiguous. Hold all entries in review status (unpublished); no sign-off is recorded because no reviewer is engaged yet.",
+  "acceptanceCriteria": [
+    "license-000 has passed (derivative permission confirmed for seed sources) before drafting begins",
+    "At most 10 source definitions are drafted in glossary/source/<term-id>.yaml, each with: termId, term, definition (at or below grade 8), notMedicalAdvice:true, sourceRefs (pointing to allow-listed source), safetyLoad classification, and readingLevelScore",
+    "Agent uncertainty flags in the format UNCERTAIN: <termId> | <type> | <note> are captured in the review artifact as agentFlags for each entry",
+    "Any advice, dosing, diagnostic, or prognostic content is refused and flagged, never authored",
+    "All entries have reviewStatus: review (not published, not delivered, not done)",
+    "No clinicalSignoff or advocateSignoff is recorded (reviewers not yet engaged; these are drafts only)",
+    "Each definition cites only allow-listed sources confirmed in license-000"
+  ],
+  "resources": [
+    "sources/term-source-allow-list.yaml (from sources-001 and license-000)",
+    "templates/not-medical-advice-notice.md (from template-001)",
+    "PLAN.md — Solution approach section (Stage A pipeline)",
+    "PLAN.md — Data model section (glossaryEntrySchema)"
+  ],
+  "output": "glossary/source/<term-id>.yaml files (at most 10 entries) in review status with agentFlags captured; a companion review artifact per entry",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC BY 4.0"
+}

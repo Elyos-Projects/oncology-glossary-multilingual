@@ -1,0 +1,32 @@
+{
+  "id": "oncology-glossary-multilingual-maint-001",
+  "title": "Source re-verification and term-refresh cadence (terminology evolves)",
+  "project": "oncology-glossary-multilingual",
+  "type": "maintenance",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "licensing", "patient-education"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual's allow-listed sources and oncology/clinical-trial terminology evolve over time. Definitions that are accurate today may become outdated or a source license may change, requiring affected entries to be withdrawn. A documented maintenance cadence ensures the glossary remains accurate and correctly licensed after delivery, using stored snapshots and the automated watcher (watcher-001) to detect drift.",
+  "objective": "Document a maintenance cadence for re-verifying allow-list sources (detect upstream or license changes via stored snapshots) and refreshing term entries as oncology terminology evolves, including the withdraw, correct, re-review, re-publish procedure for post-delivery inaccuracies and a license-change withdrawal procedure.",
+  "acceptanceCriteria": [
+    "docs/maintenance-cadence.md is created defining: frequency of allow-list source re-verification (at minimum annually, or triggered by watcher-001 hash-drift alert), procedure for detecting and responding to license changes (withdraw affected entries, record reason, update allow-list), and the term-refresh process when oncology terminology evolves",
+    "Document defines the withdraw, correct, re-review, re-publish procedure for post-delivery inaccuracies: (1) withdraw the affected entry from publication, (2) correct the definition, (3) re-review through the same clinical + advocate gate and translation gate if applicable, (4) re-publish with updated provenance",
+    "License-change withdrawal procedure is documented: if a source's license changes to forbid reuse, affected entries are immediately flagged, removed from distribution, and the impact assessed using provenance records",
+    "Cadence references the source-change watcher (watcher-001) and the allow-list schema (sources-001) for detecting hash drift"
+  ],
+  "resources": [
+    "sources/term-source-allow-list.yaml (sources-001)",
+    "tooling/watch-sources.js (watcher-001)",
+    "PLAN.md — Sustainability and maintenance section",
+    "PLAN.md — Data, licensing and compliance section"
+  ],
+  "output": "docs/maintenance-cadence.md with source re-verification schedule, term-refresh process, and post-delivery correction and license-change withdrawal procedures",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "oncology-glossary-multilingual-review-003",
+  "title": "Translation review checklist plus back-translation QA procedure",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "high",
+  "domain": ["oncology", "translation", "patient-education", "review-process"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "small",
+  "status": "open",
+  "context": "oncology-glossary-multilingual translates reviewed oncology glossary entries into under-served languages. A translation review checklist is required so qualified medical-translation reviewers can verify accuracy, meaning preservation (especially negations and urgency), cultural appropriateness, and termbase adherence. Back-translation QA is mandatory for all terms with safetyLoad other than none.",
+  "objective": "Author a translation review checklist and back-translation QA procedure for qualified medical-translation reviewers, covering: meaning preservation, negation/urgency/consent accuracy, termbase adherence, cultural appropriateness, notMedicalAdvice notice in target language, and mandatory back-translation QA steps for safety-load terms.",
+  "acceptanceCriteria": [
+    "templates/translation-review-checklist.md is created with checkable items covering: meaning preservation (especially negations, urgency, consent terms), termbase adherence, cultural appropriateness, notMedicalAdvice notice in target language, UTF-8 encoding, and agentFlag resolution",
+    "Procedure specifies that back-translation QA is mandatory for every term with safetyLoad other than none, with comparison to the reviewed source definition before sign-off",
+    "Checklist includes a sign-off block capturing: reviewer name, language pair, medical-translation qualification, COI declaration, date, and QA results for back-translated terms",
+    "Procedure references clinical-review-checklist.md (review-001) for the source-side accuracy requirements"
+  ],
+  "resources": [
+    "PLAN.md — Quality, review and risk gates section",
+    "PLAN.md — Artifacts / data model section (safetyLoad enum)",
+    "templates/clinical-review-checklist.md (review-001)"
+  ],
+  "output": "templates/translation-review-checklist.md including the back-translation QA procedure",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

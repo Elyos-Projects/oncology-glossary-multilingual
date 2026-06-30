@@ -1,0 +1,32 @@
+{
+  "id": "oncology-glossary-multilingual-reviewers-002",
+  "title": "Secure ≥1 oncology reviewer and ≥1 patient advocate (COI on file)",
+  "project": "oncology-glossary-multilingual",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "patient-education", "review-process"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "oncology-glossary-multilingual cannot publish any patient-facing definition without both a credentialed oncology reviewer and a patient advocate signed off. Securing these reviewers is the M1 entry gate: if this task is not completed by 2026-10-31, source-definition work does not proceed to sign-off and the project holds at M0. Candidate types: academic cancer centers, oncology professional societies, volunteer clinician networks, cancer patient-advocacy organizations.",
+  "objective": "Recruit and confirm at least 1 credentialed oncology reviewer and at least 1 patient advocate meeting the qualification criteria in reviewers-001, with COI declarations on file, ready to review the draft entries from draft-001.",
+  "acceptanceCriteria": [
+    "At least 1 credentialed oncology reviewer (oncologist, oncology pharmacist, or oncology nurse with relevant scope) is confirmed and has signed a COI declaration",
+    "At least 1 patient advocate (health-literacy or patient-navigation competence) is confirmed and has signed a COI declaration; this person is different from the clinical reviewer",
+    "Both reviewers have received and acknowledged the applicable review checklists (review-001 and review-002) and the qualification/independence rules (reviewers-001)",
+    "A reviewer roster (docs/reviewer-roster.md or equivalent) records their credentials, language, COI status, and availability, with personal contact details handled out-of-band and not committed to the repo",
+    "If a reviewer pair is not secured by 2026-10-31, the project holds at M0 per the decision rule in PLAN.md"
+  ],
+  "resources": [
+    "docs/reviewer-qualification-rules.md (reviewers-001)",
+    "PLAN.md — Governance section",
+    "PLAN.md — Reviewer- and partner-acquisition plan"
+  ],
+  "output": "Confirmed reviewer roster (at least 1 oncology reviewer and 1 patient advocate, COI on file), recorded in docs/reviewer-roster.md with PII handled out-of-band",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

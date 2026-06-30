@@ -1,0 +1,33 @@
+{
+  "id": "oncology-glossary-multilingual-translators-001",
+  "title": "Secure ≥1 qualified medical-translation reviewer for first language pair",
+  "project": "oncology-glossary-multilingual",
+  "type": "research",
+  "lane": "donated",
+  "priority": "medium",
+  "domain": ["oncology", "translation", "patient-education", "review-process"],
+  "riskTier": "low",
+  "urgent": false,
+  "deliverable": "document",
+  "tokenEstimate": "medium",
+  "status": "open",
+  "context": "oncology-glossary-multilingual cannot publish any translation without a qualified medical-translation reviewer for that language pair. Securing a translation reviewer is the M2 entry gate. Candidate partner: Translators without Borders / CLEAR Global. A reviewer must be native or near-native in the target language and medically-translation competent, and independent of the drafting step.",
+  "objective": "Recruit and confirm at least 1 qualified medical-translation reviewer for the first target language pair, with COI declaration on file, ready to review the translate-001 output.",
+  "acceptanceCriteria": [
+    "At least 1 qualified medical-translation reviewer for the first target language pair is confirmed, with native or near-native fluency and medical-translation competence documented",
+    "Reviewer has signed a COI declaration and received the translation review checklist (review-003)",
+    "Reviewer is independent of the drafting step (not the person who ran the translation agent)",
+    "Reviewer's language pair and qualification are recorded in docs/reviewer-roster.md with PII handled out-of-band",
+    "If no qualified translation reviewer for the first language is secured by 2026-12-31, translation work does not proceed for that language per the decision rule in PLAN.md"
+  ],
+  "resources": [
+    "docs/reviewer-qualification-rules.md (reviewers-001)",
+    "templates/translation-review-checklist.md (review-003)",
+    "PLAN.md — Governance section (Qualified medical-translation reviewer role)",
+    "Translators without Borders / CLEAR Global — candidate partner organization"
+  ],
+  "output": "Confirmed translation-reviewer entry in docs/reviewer-roster.md (language pair, qualification, COI status) for the first target language pair",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "MIT"
+}

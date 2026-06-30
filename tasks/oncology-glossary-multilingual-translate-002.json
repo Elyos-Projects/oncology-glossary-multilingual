@@ -1,0 +1,36 @@
+{
+  "id": "oncology-glossary-multilingual-translate-002",
+  "title": "Translate partner-priority term set into agreed language",
+  "project": "oncology-glossary-multilingual",
+  "type": "writing",
+  "lane": "donated",
+  "priority": "low",
+  "domain": ["oncology", "translation", "patient-education"],
+  "riskTier": "high",
+  "urgent": false,
+  "deliverable": "translation",
+  "tokenEstimate": "large",
+  "status": "open",
+  "context": "oncology-glossary-multilingual's partner (partner-001) has specified a priority term list and agreed target language. This task translates those priority terms into the agreed language, with full translation review and back-translation QA for all safety-load terms, building on translate-001 and license-002. All entries must pass license-002 CI before packaging for delivery.",
+  "objective": "Translate the partner's priority term set into the agreed language, using the termbase and translation review checklist. Obtain qualified translation reviewer sign-off on each entry. Perform mandatory back-translation QA for all terms with safetyLoad other than none.",
+  "acceptanceCriteria": [
+    "All partner-priority terms are translated into the agreed language in glossary/<lang>/<term-id>.yaml, preserving meaning, negations, urgency, and preserved terms from the termbase",
+    "Qualified translation reviewer sign-off is recorded per entry; reviewer is independent of the drafting step and COI-declared",
+    "Back-translation QA is performed for every term with safetyLoad other than none, compared to the reviewed source definition before sign-off",
+    "All agent uncertainty flags are resolved or accepted-as-is with reasoning before sign-off",
+    "license-002 passes for every entry (attribution, provenance, notMedicalAdvice:true, license-compatible)",
+    "UTF-8 encoding throughout",
+    "Entries are ready for packaging in delivery-001"
+  ],
+  "resources": [
+    "glossary/source/ (reviewed source terms from glossary-source-001)",
+    "glossary/termbase/<lang>-termbase.yaml (termbase-001)",
+    "translate-001 output (prior translations and QA precedents)",
+    "docs/partner-agreement.md (partner-001)",
+    "templates/translation-review-checklist.md (review-003)"
+  ],
+  "output": "glossary/<lang>/<term-id>.yaml for all partner-priority terms, with translation review sign-offs and back-translation QA results",
+  "requestor": "TO BE SECURED",
+  "verifiedNeed": false,
+  "outputLicense": "CC BY 4.0"
+}
